@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@mipmap/bg_foreground">
+
+    <TextView
+        android:layout_width="299dp"
+        android:layout_height="95dp"
+        android:text="Kółeczko i Krzyżyk"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"></TextView>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="320dp"
+        android:layout_height="100dp">
+        <ImageView
+
+            android:id="@+id/bt1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:padding="20sp"
+            android:background="@drawable/gameback">
+        </ImageView>
+        <ImageView
+
+            android:id="@+id/bt2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:padding="20sp"
+            android:background="@drawable/gameback">
+        </ImageView>
+        <ImageView
+            android:id="@+id/bt3"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="100dp">
+        <ImageView
+
+            android:id="@+id/bt4"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+        </ImageView>
+        <ImageView
+
+            android:id="@+id/bt5"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/bt6"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+            >
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="100dp">
+        <ImageView
+
+            android:id="@+id/bt7"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+            >
+        </ImageView>
+        <ImageView
+
+            android:id="@+id/bt8"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/bt9"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textSize="20pt"
+            android:background="@drawable/gameback">
+            >
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/OTVP"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="TY"
+            android:textColor="@color/green"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

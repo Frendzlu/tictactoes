@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_foreground"
+    tools:context=".EndScreenActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/jjj"
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:background="@drawable/back"
+        android:backgroundTint="@color/teal_200"
+        android:text="WYNIK"
+        android:textColor="@color/white"
+        android:textSize="20pt"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/result"
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@drawable/back"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:textSize="20pt"
+        android:gravity="center"
+        />
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="100pt"
+        android:layout_height="25pt"
+        android:text="Jeszcze raz"
+        android:background="@drawable/back"
+        android:onClick="Play">
+
+    </Button>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="100pt"
+        android:layout_height="25pt"
+        android:text="Menu"
+        android:background="@drawable/back"
+        android:onClick="Return">
+
+    </Button>
+
+
+</LinearLayout>
