@@ -99,42 +99,53 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public int ended(){
-        outer:
-        for (int i = 0; i < 3; i++){
-            int a = board[i][0];
-            for (int j = 0; j < 3; j++){
-                if(a != board[i][j])
-                    continue outer;
-            }
-            return a;
-        }
-        outer:
-        for (int i = 0; i < 3; i++){
-            int a = board[0][i];
-            for (int j = 0; j < 3; j++){
-                if(a != board[j][i])
-                    continue outer;
-            }
-            return a;
-        }
-        int a = board[0][0];
-        boolean won = true;
-        for (int i = 0; i < 3; i++){
-            if(a != board[i][i])
-                won = false;
-        }
-        if(won)
-            return a;
-        a = board[0][2];
-        won = true;
-        for (int i = 0; i < 3; i++){
-            if(a != board[i][2 - i])
-                won = false;
-        }
-        if(won)
-            return a;
+        int[][][] winPositions = {{{0, 0}, {0, 1}, {2, 0}}, {{0, 1}, {1, 1}, {2, 1}}, {{0, 2}, {1, 2}, {2, 2}},
+                {{0, 0}, {0, 1}, {0, 2}}, {{1, 0}, {1, 1}, {1, 2}}, {{2, 0}, {2, 1}, {2, 2}},
+                {{0, 0}, {1, 1}, {2, 2}}, {{2, 0}, {1, 1}, {0, 2}}};
 
+        for (int[][] winPosition : winPositions) {
+            if (board[winPosition[0][0]][winPosition[0][1]] == board[winPosition[1][0]][winPosition[1][1]] &&
+                    board[winPosition[1][0]][winPosition[1][1]] == board[winPosition[2][0]][winPosition[2][1]]) {
+                return board[winPosition[0][0]][winPosition[0][1]];
+            }
+        }
         return -1;
+//        outer:
+//        for (int i = 0; i < 3; i++){
+//            int a = board[i][0];
+//            for (int j = 0; j < 3; j++){
+//                if(a != board[i][j])
+//                    continue outer;
+//            }
+//            return a;
+//        }
+//        outer:
+//        for (int i = 0; i < 3; i++){
+//            int a = board[0][i];
+//            for (int j = 0; j < 3; j++){
+//                if(a != board[j][i])
+//                    continue outer;
+//            }
+//            return a;
+//        }
+//        int a = board[0][0];
+//        boolean won = true;
+//        for (int i = 0; i < 3; i++){
+//            if(a != board[i][i])
+//                won = false;
+//        }
+//        if(won)
+//            return a;
+//        a = board[0][2];
+//        won = true;
+//        for (int i = 0; i < 3; i++){
+//            if(a != board[i][2 - i])
+//                won = false;
+//        }
+//        if(won)
+//            return a;
+//
+//        return -1;
     }
 
 

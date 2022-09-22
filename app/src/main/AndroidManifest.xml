@@ -30,17 +30,17 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".OnlineLoadingus"
+            android:name=".LoadingActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Podsumowanie"
+            android:name=".ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".MainMenu"
+            android:name=".MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

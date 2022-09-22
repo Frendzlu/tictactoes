@@ -1,7 +1,6 @@
 package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -69,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
             img.setTranslationY(-1000f);
 
             if (activePlayer == 0) {
-                img.setImageResource(R.mipmap.x_foreground);
+                img.setImageResource(R.drawable.x);
                 activePlayer = 1;
                 TextView status = findViewById(R.id.status);
                 status.setTextColor(Color.GREEN);
-                status.setText("KÓŁECZKO");
+                status.setText("Circle");
                 int hasWon = 0;
                 for (int[] winPosition : winPositions) {
                     if (gameState[winPosition[0]] == gameState[winPosition[1]] &&
@@ -86,23 +85,23 @@ public class MainActivity extends AppCompatActivity {
                         gameActive = false;
                         status.setText("");
                         if (gameState[winPosition[0]] == 0) {
-                            winnerStr = "KRZYŻYK WYGRAŁ";
+                            winnerStr = "Crosses won";
                         } else {
-                            winnerStr = "KÓŁECZKO WYGRAŁO";
+                            winnerStr = "Circles won";
                         }
-                        Intent intent = new Intent(this, Podsumowanie.class);
+                        Intent intent = new Intent(this, ResultActivity.class);
                         intent.putExtra("result",winnerStr);
                         startActivity(intent);
                     }
                 }
                 if (counter == 9 && hasWon == 0) {
-                    Intent intent = new Intent(this, Podsumowanie.class);
-                    intent.putExtra("result","REMIS");
+                    Intent intent = new Intent(this, ResultActivity.class);
+                    intent.putExtra("result","Draw");
                     startActivity(intent);
                 }
                 if(isBot && available_spaces.size()>0&&hasWon!=1){
                     status.setTextColor(Color.RED);
-                    status.setText("KRZYŻYK");
+                    status.setText("Cross");
                     Random rand = new Random();
                     int n = rand.nextInt(available_spaces.size());
                     gameState[available_spaces.get(n)] = 1;
@@ -138,16 +137,16 @@ public class MainActivity extends AppCompatActivity {
                             imagus = findViewById(R.id.imageView8);
                             break;
                     };
-                    imagus.setImageResource(R.mipmap.o_foreground);
+                    imagus.setImageResource(R.drawable.o);
                     available_spaces.remove(n);
 
                 }
             } else {
-                img.setImageResource(R.mipmap.o_foreground);
+                img.setImageResource(R.drawable.o);
                 activePlayer = 0;
                 TextView status = findViewById(R.id.status);
                 status.setTextColor(Color.RED);
-                status.setText("KRZYŻYK");
+                status.setText("Cross");
             }
             img.animate().translationYBy(1000f).setDuration(0);
         }
@@ -164,11 +163,11 @@ public class MainActivity extends AppCompatActivity {
                 TextView status = findViewById(R.id.status);
                 status.setText("");
                 if (gameState[winPosition[0]] == 0) {
-                    winnerStr = "KRZYŻYK WYGRAŁ";
+                    winnerStr = "Cross won";
                 } else {
-                    winnerStr = "KÓŁECZKO WYGRAŁO";
+                    winnerStr = "Circles won";
                 }
-                Intent intent = new Intent(this, Podsumowanie.class);
+                Intent intent = new Intent(this, ResultActivity.class);
                 intent.putExtra("result",winnerStr);
                 if(getIntent().hasExtra("mode")){
                     intent.putExtra("mode","BOT");
@@ -177,8 +176,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (counter == 9 && hasWon == 0) {
-            Intent intent = new Intent(this, Podsumowanie.class);
-            intent.putExtra("result","REMIS");
+            Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("result","Draw");
             startActivity(intent);
         }
     }
@@ -203,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView status = findViewById(R.id.status);
         status.setTextColor(Color.RED);
-        status.setText("KRZYŻYK");
+        status.setText("Cross");
     }
 
     @Override

@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class MainMenu extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         Intent intent = new Intent(this,MainActivity.class);
-        Intent intentOnline = new Intent(this,OnlineLoadingus.class);
+        Intent intentOnline = new Intent(this, LoadingActivity.class);
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

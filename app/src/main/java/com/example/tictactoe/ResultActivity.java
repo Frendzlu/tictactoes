@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Podsumowanie extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
 
 
     @Override
@@ -19,11 +19,11 @@ public class Podsumowanie extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_podsumowanie);
+        setContentView(R.layout.activity_result);
         Button again = (Button) findViewById(R.id.play_again);
         Button main = (Button) findViewById(R.id.main_menu);
         Intent againI = new Intent(this, MainActivity.class);
-        Intent menuI = new Intent(this, MainMenu.class);
+        Intent menuI = new Intent(this, MenuActivity.class);
         TextView results = (TextView) findViewById(R.id.Results);
         Bundle extras = getIntent().getExtras();
         results.setText(extras.getString("result"));

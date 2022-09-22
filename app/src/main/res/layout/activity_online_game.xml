@@ -12,7 +12,8 @@
     <TextView
         android:layout_width="299dp"
         android:layout_height="95dp"
-        android:text="Kółeczko i Krzyżyk"
+        android:textColor="#FFBB86FC"
+        android:text="Noughts'n'crosses"
         android:textSize="35sp"
         android:textStyle="bold"
         app:fontFamily="sans-serif"></TextView>
@@ -27,7 +28,6 @@
             android:layout_height="match_parent"
             android:onClick="onClick"
             android:textSize="20pt"
-            android:padding="20sp"
             android:background="@drawable/gameback">
         </ImageView>
         <ImageView
@@ -37,7 +37,6 @@
             android:layout_height="match_parent"
             android:onClick="onClick"
             android:textSize="20pt"
-            android:padding="20sp"
             android:background="@drawable/gameback">
         </ImageView>
         <ImageView
@@ -126,8 +125,8 @@
             android:id="@+id/OTVP"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:text="TY"
-            android:textColor="@color/green"
+            android:text="Your turn"
+            android:textColor="#BB86FC"
             android:textSize="30dp"
             android:gravity="center"
             />

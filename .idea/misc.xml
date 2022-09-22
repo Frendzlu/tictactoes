@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/back.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/bg_background.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/buttona.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/circular_progress_bar.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/gameback.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/grid_background.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/o_background.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/drawable/x_background.xml" value="0.1775" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_end_screen.xml" value="0.16875" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_game.xml" value="0.16875" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_loading.xml" value="0.16875" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_main.xml" value="0.16875" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_main_menu.xml" value="0.16875" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_online_game.xml" value="0.16875" />
+        <entry key="..\:/Users/4P11/StudioProjects/TicTacToe/app/src/main/res/layout/activity_result.xml" value="0.16875" />
         <entry key="..\:/Users/Kacper/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/back.xml" value="0.204" />
         <entry key="..\:/Users/Kacper/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/gameBack.xml" value="0.204" />
         <entry key="..\:/Users/Kacper/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/gameback.xml" value="0.204" />

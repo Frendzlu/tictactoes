@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
@@ -48,7 +49,7 @@ public class EndScreenActivity extends AppCompatActivity {
 
     public void Play(View view) {
         if(onnlie){
-            Intent intent = new Intent(this, OnlineLoadingus.class);
+            Intent intent = new Intent(this, LoadingActivity.class);
             startActivity(intent);
 
         }
@@ -60,7 +61,7 @@ public class EndScreenActivity extends AppCompatActivity {
     }
 
     public void Return(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
 }

@@ -16,9 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
 
-public class OnlineLoadingus extends AppCompatActivity {
+public class LoadingActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference roomRef;
     ValueEventListener postListener;
@@ -26,10 +25,10 @@ public class OnlineLoadingus extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_online_loadingus);
+        setContentView(R.layout.activity_loading);
 
 
-        database = FirebaseDatabase.getInstance("https://tictactoe-aa32e-default-rtdb.europe-west1.firebasedatabase.app/");
+        database = FirebaseDatabase.getInstance("https://tictactoes-2cbfe-default-rtdb.europe-west1.firebasedatabase.app/");
         DatabaseReference rootRef = database.getReference();
         DatabaseReference roomsRef = rootRef.child("rooms");
 
@@ -69,7 +68,7 @@ public class OnlineLoadingus extends AppCompatActivity {
         roomValue.put("Board",  new ArrayList<Integer>(List.of(-1,-1,-1,-1,-1,-1,-1,-1,-1)));
         roomValue.put("Current",  0);
         roomRef.setValue(roomValue);
-        Intent i = new Intent(OnlineLoadingus.this, OnlineGameActivity.class);
+        Intent i = new Intent(LoadingActivity.this, OnlineGameActivity.class);
         i.putExtra("localPlayer", 0);
         i.putExtra("roomRef", roomRef.toString().substring(roomRef.getRoot().toString().length()));
         startActivity(i);
@@ -90,7 +89,7 @@ public class OnlineLoadingus extends AppCompatActivity {
                 Log.d("firebase", String.valueOf(room));
 
                 if((Boolean) room.get("Active")){
-                    Intent i = new Intent(OnlineLoadingus.this, OnlineGameActivity.class);
+                    Intent i = new Intent(LoadingActivity.this, OnlineGameActivity.class);
                     i.putExtra("localPlayer", 1);
                     i.putExtra("roomRef", roomRef.toString().substring(roomRef.getRoot().toString().length()));
 
